@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using System.Net.Mail;
+using System.Configuration;
 
 namespace SeLigaNoBlog
 {
@@ -8,18 +9,20 @@ namespace SeLigaNoBlog
 
         public void EnviarEmail(Usuario usuario, Artigo artigo)
         {
+            var smtp = Smtp.ObterPorConfig();
+            
+            var cliente = new SmtpClient(smtp.Servidor, smtp.Porta);
+            cliente.Credentials = new NetworkCredential(smtp.Login, smtp.Senha);
+            
+            var mail = new MailMessage()
+            {
+                From = new MailAddress(smtp.Email, smtp.Nome),
+                Subject = "Recomendação de Artigo",
+                Body = artigo.Url
+            };
 
-            var smtp = new SmtpClient("smtp.gmail.com", 25);
 
-            smtp.Credentials = new NetworkCredential("username", "senha");
-
-            var mail = new MailMessage();
-            mail.From = new MailAddress("denisferrari@azys.com.br", "Denis Ferrari");
-            mail.Subject = "Recomendação de Artigo";
             mail.To.Add(new MailAddress(usuario.Email, usuario.Nome));
-            //mail.To.Add(new MailAddress("denisferrari@azys.com.br", "Denis Ferrari"));
-            mail.Body = artigo.Url;
-
             //smtp.Send(mail);
 
         }
