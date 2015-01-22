@@ -10,15 +10,19 @@ namespace SeLigaNoBlog
     {
         public void Executar()
         {
-            var usuario = new Usuario();
-            usuario.Nome = "Louzada";
-            usuario.Email = "arizio.louzada@pm.es.gov.br";
+            var smtp = Smtp.ObterPorConfig();
 
-            var Blog = new BlogKentBeck();
+            var usuario = new Usuario("Cb Louzada", "arizio.louzada@pm.es.gov.br");
+            //usuario.Nome = ;
+            //usuario.Email = ;
+
+            var Blog = new BolgMatinFowler();
 
             var artigo = Blog.ObterArtigo();
 
-            var servicoEmail = new Gmail();
+            var servicoEmail = new Gmail(smtp);
+
+            var mensagem = new MensagemEmail(usuario, artigo);
 
             servicoEmail.EnviarEmail(usuario, artigo);
         }        

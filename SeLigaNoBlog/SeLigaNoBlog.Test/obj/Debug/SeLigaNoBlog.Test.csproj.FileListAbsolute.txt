@@ -1,0 +1,9 @@
+C:\Users\Admin\Desktop\CursoCShapr\SeLigaNoBlog\SeLigaNoBlog.Test\bin\Debug\SeLigaNoBlog.Test.dll
+C:\Users\Admin\Desktop\CursoCShapr\SeLigaNoBlog\SeLigaNoBlog.Test\bin\Debug\SeLigaNoBlog.Test.pdb
+C:\Users\Admin\Desktop\CursoCShapr\SeLigaNoBlog\SeLigaNoBlog.Test\bin\Debug\SeLigaNoBlog.dll
+C:\Users\Admin\Desktop\CursoCShapr\SeLigaNoBlog\SeLigaNoBlog.Test\bin\Debug\TNX.RssReader.dll
+C:\Users\Admin\Desktop\CursoCShapr\SeLigaNoBlog\SeLigaNoBlog.Test\bin\Debug\TNX.ResolveIT.dll
+C:\Users\Admin\Desktop\CursoCShapr\SeLigaNoBlog\SeLigaNoBlog.Test\bin\Debug\SeLigaNoBlog.pdb
+C:\Users\Admin\Desktop\CursoCShapr\SeLigaNoBlog\SeLigaNoBlog.Test\obj\Debug\SeLigaNoBlog.Test.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\CursoCShapr\SeLigaNoBlog\SeLigaNoBlog.Test\obj\Debug\SeLigaNoBlog.Test.dll
+C:\Users\Admin\Desktop\CursoCShapr\SeLigaNoBlog\SeLigaNoBlog.Test\obj\Debug\SeLigaNoBlog.Test.pdb
