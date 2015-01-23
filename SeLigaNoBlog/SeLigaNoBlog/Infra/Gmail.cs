@@ -4,7 +4,8 @@ using System.Configuration;
 
 namespace SeLigaNoBlog
 {
-    public class Gmail
+    
+    public class Gmail : IServicoWeb
     {
         //Constatntes de configuração
         public const string HOST = "smtp.gmail.com";
@@ -18,11 +19,12 @@ namespace SeLigaNoBlog
         }
 
 
-        public void EnviarEmail(Usuario usuario, Artigo artigo)
+        public void Enviar(Mensagem email)
         {
             var smtpCliente = ObterSmtpClient();
 
-            var mail = new MensagemEmail(usuario, artigo).ObterMailMessage();
+            var mail = email.ObterMailMessage();
+
             mail.From = new MailAddress(this.Smtp.Login, this.Smtp.Nome);
 
             smtpCliente.Send(mail);

@@ -49,12 +49,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Artigo.cs" />
-    <Compile Include="Blog.cs" />
+    <Compile Include="FonteArtigos.cs" />
+    <Compile Include="Feed.cs" />
     <Compile Include="BlogKentBeck.cs" />
     <Compile Include="BolgMatinFowler.cs" />
     <Compile Include="Gmail.cs" />
-    <Compile Include="IBlog.cs" />
-    <Compile Include="MensagemEmail.cs" />
+    <Compile Include="IArtigos.cs" />
+    <Compile Include="IServicoWeb.cs" />
+    <Compile Include="Mensagem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicoRecomendacao.cs" />
     <Compile Include="Smtp.cs" />

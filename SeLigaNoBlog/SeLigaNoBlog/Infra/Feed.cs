@@ -1,33 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TNX.RssReader;
 
 namespace SeLigaNoBlog
 {
-    public abstract class Blog : IBlog
+    public  class Feed : IArtigos //LeitorFeed: IFonteArtigos
     {
-        public string Url { get; set; }
+        public FonteArtigos Fonte { get; set; }
 
-        protected Blog(string url)
+        public Feed(FonteArtigos fonte)
         {
-            Url = url;
+            Fonte = fonte;
         }
 
-        public abstract bool EhArtigo(Artigo artigo);
+        //public abstract bool EhArtigo(Artigo artigo);
 
         public Artigo ObterArtigo()
         {
 
             //Obtendo os posts
-            var feed = RssHelper.ReadFeed(Url);
+            var feed = RssHelper.ReadFeed(this.Fonte.Url);
 
             //Selecionandop o artigo
             var articles = feed.Items
                                     .Select(i => new Artigo(i.Title, i.Link))
-                                    .Where(a => a.Url.Contains("articles"));
+                                    .Where(a => a.Url.Contains(this.Fonte.TermoFiltragem));
 
             //Obtendo o artigo aleatório
             var random = new Random();

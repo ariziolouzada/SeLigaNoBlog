@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SeLigaNoBlog
 {
-    public interface IBlog
+    public interface IArtigos
     {
         Artigo ObterArtigo();
     }

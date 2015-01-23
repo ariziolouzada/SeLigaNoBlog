@@ -8,13 +8,13 @@ using System.Net.Mail;
 
 namespace SeLigaNoBlog
 {
-    public class MensagemEmail
+    public class Mensagem
     {
         public Usuario Usuario { get; set; }
         public Artigo Artigo { get; set; }
 
 
-        public MensagemEmail(Usuario usuario, Artigo artigo)
+        public Mensagem(Usuario usuario, Artigo artigo)
         {
             this.Usuario = usuario;
             this.Artigo = artigo;
